@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeVerse</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f5f7ff;
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(11,16,32,.95);
+      border-bottom: 1px solid #27304d;
+      padding: 15px 7%;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo { font-size: 1.4rem; font-weight: 800; color: #8b7cff; }
+    nav a { color: #dce2ff; text-decoration: none; margin-left: 18px; }
+    nav a:hover { color: #8b7cff; }
+    .hero {
+      min-height: 75vh; padding: 90px 7%;
+      display: grid; place-items: center; text-align: center;
+      background: radial-gradient(circle at 50% 30%, #29335e, #0b1020 65%);
+    }
+    .hero h1 { font-size: clamp(2.5rem, 8vw, 5rem); margin-bottom: 15px; }
+    .hero h1 span { color: #8b7cff; }
+    .hero p { max-width: 650px; margin: auto; color: #c5cbea; }
+    .btn {
+      display: inline-block; margin-top: 25px; padding: 12px 22px;
+      background: #8b7cff; color: white; border-radius: 10px;
+      text-decoration: none; font-weight: bold;
+    }
+    section { padding: 70px 7%; max-width: 1100px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .card {
+      background: #151c33; border: 1px solid #293453;
+      border-radius: 16px; padding: 25px; transition: .2s;
+    }
+    .card:hover { transform: translateY(-5px); border-color: #8b7cff; }
+    .icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .card p { color: #b8c0dd; margin-top: 8px; }
+    footer { text-align: center; padding: 30px; color: #929ab8; border-top: 1px solid #27304d; }
+    @media (max-width: 600px) {
+      nav { padding: 14px 5%; }
+      nav a { margin-left: 8px; font-size: .9rem; }
+      section { padding: 55px 5%; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">AnimeVerse</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#anime">Anime</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+
+  <main id="home" class="hero">
+    <div>
+      <h1>Welcome to <span>AnimeVerse</span></h1>
+      <p>A simple anime-themed website for discovering characters, stories, and your next favorite series.</p>
+      <a class="btn" href="#anime">Explore Anime</a>
+    </div>
+  </main>
+
+  <section id="anime">
+    <h2>Featured Anime</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">⚔️</div>
+        <h3>Action</h3>
+        <p>Epic battles, powerful characters, and exciting adventures.</p>
+      </article>
+      <article class="card">
+        <div class="icon">✨</div>
+        <h3>Fantasy</h3>
+        <p>Explore magical worlds, strange creatures, and unforgettable journeys.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🌸</div>
+        <h3>Slice of Life</h3>
+        <p>Relaxing stories about friendship, school, family, and everyday life.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About This Site</h2>
+    <div class="card">
+      <p>This is a beginner-friendly anime website made with only HTML and CSS. You can customize the colors, text, sections, and add your own images later.</p>
+    </div>
+  </section>
+
+  <footer>© 2026 AnimeVerse • Made with HTML & CSS</footer>
+</body>
+</html>
